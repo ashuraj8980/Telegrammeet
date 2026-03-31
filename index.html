@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Escort Meet-up | Premium Access</title>
+    
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1341696331130205'); 
+      fbq('track', 'PageView');
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #0062ff;
+            --bg-color: #f0f4f8;
+            --warning-red: #ff0000;
+        }
+
+        body {
+            margin: 0; padding: 0;
+            background: var(--bg-color);
+            font-family: 'Poppins', sans-serif;
+            display: flex; justify-content: center; align-items: center;
+            min-height: 100vh;
+            background-image: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+        }
+
+        .main-container {
+            width: 90%; max-width: 370px;
+            background: #ffffff;
+            border-radius: 30px;
+            padding: 35px 20px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1px solid rgba(0,98,255,0.1);
+        }
+
+        .img-box {
+            width: 125px; height: 125px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            border: 4px solid var(--primary-blue);
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+        .title {
+            font-size: 26px; font-weight: 800; color: var(--primary-blue);
+            margin-bottom: 5px; line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 13px; color: #555; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        .info-list {
+            text-align: left; background: #f4f9ff;
+            padding: 18px; border-radius: 18px;
+            margin-bottom: 20px; display: inline-block; width: 92%;
+        }
+
+        .info-item {
+            font-size: 13px; margin-bottom: 10px; color: #333;
+            display: flex; align-items: center; font-weight: 600;
+        }
+
+        .info-item b { color: var(--primary-blue); margin-right: 12px; font-size: 18px; }
+
+        .timer-section { margin-bottom: 25px; }
+
+        .timer-text {
+            font-size: 15px; font-weight: 800; color: #d9534f;
+            margin-bottom: 10px; display: block;
+        }
+
+        .telegram-highlight {
+            font-size: 13px; color: #111; font-weight: 700;
+            background: #fff3cd; 
+            padding: 12px 15px;
+            border-radius: 12px; 
+            border: 2px solid #ffc107;
+            display: block;
+            line-height: 1.4;
+        }
+
+        .important-tag {
+            color: var(--warning-red);
+            font-weight: 900;
+            text-decoration: underline;
+        }
+
+        .btn-join {
+            display: block;
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: #fff; text-decoration: none;
+            padding: 20px; border-radius: 15px;
+            font-weight: 800; font-size: 17px;
+            text-transform: uppercase;
+            box-shadow: 0 10px 20px rgba(46,204,113,0.3);
+            transition: 0.4s;
+            animation: pulse-green 1.5s infinite;
+        }
+
+        @keyframes pulse-green {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+            70% { transform: scale(1.03); box-shadow: 0 0 0 12px rgba(46, 204, 113, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+        }
+
+        .disabled {
+            background: #bbb !important;
+            animation: none !important;
+            cursor: not-allowed;
+            box-shadow: none !important;
+            opacity: 0.8;
+        }
+
+        .footer { font-size: 11px; color: #999; margin-top: 18px; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="img-box">
+            <img src="pic1.jpg" alt="Elite Profile">
+        </div>
+
+        <div class="title">Biggest Escort Meet-up</div>
+        <div class="subtitle">Hotel • Flat • Room Meeting</div>
+
+        <div class="info-list">
+            <div class="info-item"><b>✦</b> 100% Safe, Secure & Private</div>
+            <div class="info-item"><b>✦</b> High-Class Professional Staff</div>
+            <div class="info-item"><b>✦</b> Multiple Age Groups (18-32)</div>
+            <div class="info-item"><b>✦</b> Instant Meeting Guaranteed</div>
+        </div>
+
+        <div class="timer-section">
+            <span class="timer-text" id="status">
+                Verifying Connection... <span id="seconds">5</span>s
+            </span>
+            <div class="telegram-highlight">
+                ⚠ <span class="important-tag">IMPORTANT</span>: Agar aapke pass Telegram hai tabhi link ka wait kijiye!
+            </div>
+        </div>
+
+        <a href="https://t.me/+cP0jxp7wi-5iNWE1" id="joinBtn" class="btn-join disabled">
+            Please Wait...
+        </a>
+
+        <div class="footer">Premium Verified Service | 24/7 Available</div>
+    </div>
+
+    <script>
+        let timeLeft = 5;
+        const btn = document.getElementById('joinBtn');
+        const secondsText = document.getElementById('seconds');
+        const statusText = document.getElementById('status');
+        let leadFired = false; // Isse lead ek baar hi count hogi
+
+        const timer = setInterval(() => {
+            timeLeft--;
+            if(secondsText) secondsText.innerText = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                statusText.innerHTML = "Access Verified! Link is Live.";
+                statusText.style.color = "#27ae60";
+                btn.classList.remove('disabled');
+                btn.innerText = "Join Channel Now";
+            }
+        }, 1000);
+
+        btn.addEventListener('click', function(e) {
+            if(timeLeft > 0) {
+                e.preventDefault();
+            } else {
+                // Lead logic: Sirf pehli click par count hoga
+                if(!leadFired) {
+                    fbq('track', 'Lead'); 
+                    leadFired = true; 
+                    console.log("Lead fired on new Pixel ID: 1341696331130205");
+                }
+            }
+        });
+    </script>
+</body>
+</html>
