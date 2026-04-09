@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Meet | Premium HOSPITALITY Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; overflow-x: hidden; }
+        .main-card { background: #ffffff; border-radius: 24px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03); border: 1px solid #e2e8f0; }
+        .btn-blue { background: linear-gradient(90deg, #1e40af 0%, #3b82f6 100%); transition: all 0.3s ease; }
+        .btn-blue:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(30, 64, 175, 0.15); }
+        .dot { height: 6px; width: 6px; background-color: #10b981; border-radius: 50%; display: inline-block; margin-right: 4px; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        
+        /* Ultra-Compact Notification Styling */
+        #notification-box { position: fixed; bottom: 85px; left: 15px; z-index: 9999; pointer-events: none; }
+        .toast { 
+            background: rgba(15, 23, 42, 0.95); 
+            backdrop-filter: blur(8px);
+            color: white; 
+            padding: 6px 12px; 
+            border-radius: 50px; 
+            font-size: 10px; 
+            margin-top: 6px; 
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex; 
+            align-items: center; 
+            gap: 6px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+            max-width: 220px;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center min-h-screen">
+
+    <div id="notification-box"></div>
+
+    <nav class="w-full bg-white border-b border-gray-100 py-3 px-6 fixed top-0 z-50 shadow-sm">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <div class="flex flex-col text-left">
+                <span class="text-lg font-extrabold text-blue-900 tracking-tighter">REAL MEET</span>
+                <span class="text-[9px] font-bold text-slate-400 uppercase tracking-[0.2em] -mt-1">All City Available</span>
+            </div>
+            <div class="bg-emerald-50 text-emerald-700 px-2 py-1 rounded-full flex items-center text-[9px] font-black uppercase border border-emerald-100">
+                <span class="dot"></span> 3,890+ Satisfied customer 
+            </div>
+        </div>
+    </nav>
+
+    <main class="mt-28 px-4 w-full max-w-lg mb-16">
+        <div class="text-center mb-10">
+            <span class="text-[10px] bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-bold uppercase tracking-widest border border-blue-100">Premium Meetup Hub</span>
+            <h1 class="text-3xl font-extrabold text-slate-900 leading-tight mt-4">
+                Premium Meetup <br>& <span class="text-blue-700">Executive Placement</span>
+            </h1>
+            <p class="text-slate-400 text-[10px] mt-2 font-bold uppercase tracking-widest">Exclusive Meetup & Services</p>
+        </div>
+
+        <div id="step-1" class="main-card p-8 animate__animated animate__fadeIn">
+            <p class="text-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em] mb-8">Choose Gender</p>
+            <div class="grid grid-cols-2 gap-4">
+                <button onclick="handleSelection('Male')" class="flex flex-col items-center justify-center p-6 rounded-2xl border border-gray-100 bg-slate-50 hover:border-blue-500 hover:bg-white transition-all shadow-sm">
+                    <span class="text-xs font-black text-slate-700 uppercase">Male Client</span>
+                </button>
+                <button onclick="handleSelection('Female')" class="flex flex-col items-center justify-center p-6 rounded-2xl border border-gray-100 bg-slate-50 hover:border-blue-500 hover:bg-white transition-all shadow-sm">
+                    <span class="text-xs font-black text-slate-700 uppercase">Female Client</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="loader" class="hidden flex flex-col items-center py-20">
+            <div class="w-8 h-8 border-3 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+            <p class="mt-4 text-slate-400 font-bold text-[9px] tracking-[0.3em] uppercase">Authenticating Portal...</p>
+        </div>
+
+        <div id="step-2" class="hidden space-y-6">
+            <div id="meeting-card" class="main-card p-6 border-l-[6px] border-blue-700"></div>
+            <div id="job-card" class="main-card p-6 border-l-[6px] border-emerald-600"></div>
+        </div>
+    </main>
+
+    <footer class="mt-auto py-12 px-6 w-full bg-black text-white">
+        <div class="max-w-md mx-auto">
+            <div class="flex justify-between items-center mb-8">
+                <div class="flex flex-col text-left">
+                    <span class="text-sm font-black tracking-tighter text-blue-500 uppercase">Real Meet Network</span>
+                    <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Est. Since 2020</span>
+                </div>
+                <div class="text-[9px] font-bold text-gray-400 uppercase tracking-widest border border-gray-800 px-2 py-1 rounded">Secure • Discreet</div>
+            </div>
+            <div class="space-y-4 text-[11px] text-gray-400 leading-relaxed border-t border-gray-800 pt-8 text-left">
+                <p>Since 2020, we have specialized in high-end hospitality coordination and career placements. Our network covers 150+ cities, ensuring consistent quality and 100% privacy for elite members.</p>
+                <p>Our dedicated female staff (aged 20-35) and professional male associates are thoroughly verified for the best quality experience.</p>
+            </div>
+            <div class="mt-10 text-center text-[9px] text-gray-600 uppercase tracking-widest">
+                © 2026 Real Meet Global Group. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const cities = ["Delhi", "Mumbai", "Bangalore", "Pune", "Hyderabad", "Chandigarh", "Jaipur", "Lucknow", "Kolkata", "Gurgaon", "Noida", "Ahmedabad"];
+        const maleNames = ["Rahul", "Vikram", "Sameer", "Amit", "Sanjay", "Deepak", "Rohan", "Karan", "Abhishek", "Vijay", "Arjun", "Manish"];
+
+        function showNotification() {
+            const city = cities[Math.floor(Math.random() * cities.length)];
+            const name = maleNames[Math.floor(Math.random() * maleNames.length)];
+            const box = document.getElementById('notification-box');
+            
+            const toast = document.createElement('div');
+            toast.className = 'toast animate__animated animate__fadeInUp';
+            toast.innerHTML = `<span class="text-blue-400">●</span> <strong>${name}</strong> (${city}): Appointment Confirmed`;
+            
+            box.appendChild(toast);
+            setTimeout(() => {
+                toast.classList.replace('animate__fadeInUp', 'animate__fadeOutDown');
+                setTimeout(() => toast.remove(), 800);
+            }, 5000);
+        }
+
+        // Notification every 30 seconds
+        setInterval(showNotification, 30000);
+        setTimeout(showNotification, 3000); // First one after 3s
+
+        function handleSelection(type) {
+            localStorage.setItem('user_identity', type);
+            document.getElementById('step-1').classList.add('hidden');
+            document.getElementById('loader').classList.remove('hidden');
+            
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+                renderServices(type);
+                document.getElementById('step-2').classList.remove('hidden');
+            }, 1200);
+        }
+
+        function renderServices(gender) {
+            const mCard = document.getElementById('meeting-card');
+            const jCard = document.getElementById('job-card');
+
+            if (gender === 'Male') {
+                mCard.innerHTML = `
+                    <h3 class="text-md font-black text-slate-800 uppercase mb-4">Real Meet Service</h3>
+                    <p class="text-[13px] text-slate-600 mb-6 italic font-medium underline decoration-blue-100">We provide Desi,Nri,College,married female staff in all areas and cities (Age 20-35).</p>
+                    <p class="text-[12px] text-slate-500 mb-6">Service available for Hotels, Private Flats, and Travel/Dating companionship.</p>
+                    <button onclick="finalize('Real Meet')" class="w-full btn-blue text-white font-bold py-4 rounded-xl text-xs uppercase tracking-widest">Request Appointment Now</button>`;
+                
+                jCard.innerHTML = `
+                    <h3 class="text-md font-black text-slate-800 uppercase mb-4">Executive Job Portal</h3>
+                    <p class="text-[13px] text-slate-600 mb-6 font-semibold">Join for Women Satisfaction services and earn <span class="text-emerald-600">₹55k - ₹75k Monthly</span>.</p>
+                    <p class="text-[12px] text-slate-500 mb-6">Includes Daily Cash Payments and guaranteed daily meetings in all cities.</p>
+                    <button onclick="finalize('Job Application')" class="w-full bg-slate-900 text-white font-bold py-4 rounded-xl text-xs uppercase tracking-widest">Apply For Position</button>`;
+            } else {
+                mCard.innerHTML = `
+                    <h3 class="text-md font-black text-slate-800 uppercase mb-4">Elite Male Staff Service</h3>
+                    <p class="text-[13px] text-slate-600 mb-6 italic font-medium underline decoration-blue-100">Exclusive male associates available for private hospitality in all cities.</p>
+                    <p class="text-[12px] text-slate-500 mb-6">Secure and professional travel companions for elite female clients.</p>
+                    <button onclick="finalize('Male Meet')" class="w-full btn-blue text-white font-bold py-4 rounded-xl text-xs uppercase tracking-widest">Request Appointment Now</button>`;
+                
+                jCard.innerHTML = `
+                    <h3 class="text-md font-black text-slate-800 uppercase mb-4">Professional Staff Careers</h3>
+                    <p class="text-[13px] text-slate-600 mb-6 font-semibold underline decoration-emerald-100">Opportunities for Paid Female Staff with premium incentives.</p>
+                    <p class="text-[12px] text-slate-500 mb-6">Full privacy protection and flexible timing with high-profile coordination.</p>
+                    <button onclick="finalize('Female Job')" class="w-full bg-slate-900 text-white font-bold py-4 rounded-xl text-xs uppercase tracking-widest">Apply For Position</button>`;
+            }
+        }
+
+        function finalize(svc) {
+            localStorage.setItem('selected_service', svc);
+            window.location.href = 'details.html';
+        }
+    </script>
+</body>
+</html>
